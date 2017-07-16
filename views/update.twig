@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Form create</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"></a>
+    </div>
+</nav>
+<div class="container">
+    <form class="" action="/update/{{ cliente.getKey() }}" method="post">
+        <h3>Dados Pessoais</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="nome" class="form-inline">Nome</label>
+                    <input type="text" id="nome" name="nome" class="form-control" value="{{ cliente.get('nome') }}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="sobrenome" class="form-inline">Sobrenome</label>
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" value="{{ cliente.get('sobrenome') }}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="email" class="form-inline">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" value="{{ cliente.get('email') }}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="data_nascimento" class="form-inline">Data de nascimento</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" value="{{ cliente.get('data_nascimento') }}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="cpf" class="form-inline">CPF</label>
+                    <input type="text" id="cpf" name="cpf" class="form-control" value="{{ cliente.get('cpf') }}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="sexo" class="form-inline">Sexo</label>
+                    <select id="sexo" name="sexo" class="form-control" required value="{{ cliente.get('sexo') }}">
+                        <option value="Feminino">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="category" class="form-inline">Category</label>
+                    <input type="text" id="category" name="category" class="form-control" value="{{ cliente.get('category') }}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="telefone" class="form-inline">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" class="form-control" value="{{ cliente.get('telefone') }}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="senha" class="form-inline">Senha</label>
+                    <input type="text" id="senha" name="senha" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="senha_confirmacao" class="form-inline">Repita a senha</label>
+                    <input type="text" id="senha_confirmacao" name="senha_confirmacao" class="form-control">
+                </div>
+            </div>
+        </div>
+        <h3>Endereço</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="logradouro" class="form-inline">Logradouro</label>
+                    <select id="logradouro" name="logradouro" class="form-control" required value="{{ cliente.get('logradouro') }}">
+                        <option value="Rua">Rua</option>
+                        <option value="Avenida">Avenida</option>
+                        <option value="Alameda">Alameda</option>
+                        <option value="Travessa">Travessa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="endereco" class="form-inline">Nome</label>
+                    <input type="text" id="endereco" name="endereco" class="form-control" value="{{ cliente.get('endereco') }}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="numero" class="form-inline">Numero</label>
+                    <input type="number" id="numero" name="numero" class="form-control" value="{{ cliente.get('numero') }}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="bairro" class="form-inline">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" class="form-control" value="{{ cliente.get('bairro') }}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="complemento" class="form-inline">Complemento</label>
+                    <input type="text" id="complemento" name="complemento" class="form-control" value="{{ cliente.get('complemento') }}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="cidade" class="form-inline">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" class="form-control" value="{{ cliente.get('cidade') }}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="estado" class="form-inline">Estado</label>
+                    <input type="text" id="estado" name="estado" class="form-control" value="{{ cliente.get('estado') }}">
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-success">Salvar</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>

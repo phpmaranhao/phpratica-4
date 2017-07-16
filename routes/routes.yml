@@ -1,0 +1,13 @@
+# Routes configuration file
+
+/:
+  method: get
+  to: home:index
+
+/login:
+  method: get
+  to: login:getLogin
+
+/login:
+  method: post
+  to: login:postLogin
